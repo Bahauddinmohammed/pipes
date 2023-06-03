@@ -1,0 +1,28 @@
+<h1 style="text-align:center;">PIPES</h1>
+<div>
+  <table class="table table-bordered">
+    <thead>
+      <tr class="bg-primary">
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Fee</th>
+        <th>Date of Birth</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+      <tbody>
+        <tr *ngFor="let std of studentsDetails; index as i">
+          <td>{{i+1}}</td>
+          <td>{{std.name|titlecase}}</td>
+          <td>{{std.course}}</td>
+          <td>{{std.fee|currency:'INR':true:'4.5-5'}}</td>
+          <td>{{std.dob|date}}</td>
+          <td>{{std.dob|age}}</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
+{{salary|percent}}
+<app-practive></app-practive>
+<app-demo></app-demo>

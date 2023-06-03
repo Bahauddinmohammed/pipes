@@ -1,0 +1,32 @@
+<div class="container">
+<h1 style="text-align:center;">PIPES</h1>
+<input type="text" name="data" [(ngModel)]="data" placeholder="searching.."><br>
+<button (click)="add()">add</button>
+<div>
+    
+  <table class="table table-bordered">
+    <thead>
+      <tr class="bg-primary">
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Fee</th>
+        <th>Date of Birth</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+      <tbody>
+        <tr *ngFor="let std of studentsDetails|filter:data; index as i">
+          <td>{{i+1}}</td>
+          <td>{{std.name|titlecase}}</td>
+          <td>{{std.course}}</td>
+          <td>{{std.fee|currency:'INR':true:'4.5-5'}}</td>
+          <td>{{std.dob|date}}</td>
+          <td>{{std.dob|age}}</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
+</div>
+
+<h1>{{salary|currency:'INR':true:'5.5-5'}}</h1>

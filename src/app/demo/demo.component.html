@@ -1,0 +1,30 @@
+<br>
+
+<div class="container col-md-6">
+    <input type="text" placeholder="searching" [(ngModel)]="searchItem">
+    {{searchItem}}
+    <button (click)="add()">add</button>
+<div class="table table-bordered" >
+    <thead>
+        <tr class="bg-primary">
+            <th>S.No</th>
+            <th>Name</th>
+            <th>course</th>
+            <th>fee</th>
+            <th>dob</th>
+            <th>age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let std of studentsDetails|demos:searchItem;index as i">
+            <td>{{i+1}}</td>
+            <td>{{std.name}}</td>
+            <td>{{std.course}}</td>
+            <td>{{std.fee}}</td>
+            <td>{{std.dob|date:'short'}}</td>
+            <td>{{std.dob|std}}</td>
+        </tr>
+    </tbody>
+</div>
+</div>
+<p>{{date}}</p>

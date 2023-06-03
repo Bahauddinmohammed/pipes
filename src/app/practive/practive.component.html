@@ -1,0 +1,22 @@
+
+<table class="table table-bordered">
+    <thead>
+      <tr class="bg-primary">
+        <th>S.No</th>
+        <th>Name</th>
+        <th>ROllno</th>
+        <th>designation</th>
+     
+      
+      </tr>
+    </thead>
+      <tbody>
+        <tr *ngFor="let std of mydetails;index as i">
+          <td>{{i+1}}</td>
+          <td>{{std.name}}</td>
+          <td>{{std.rollno}}</td>
+          <td>{{std.designation}}</td>
+       
+        </tr>
+      </tbody>
+  </table>
